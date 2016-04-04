@@ -132,8 +132,8 @@ struct coefficients gpu_coeffs[NR_GPU_COEFFS] = {
 	},
 };
 #elif defined(CONFIG_SOC_EXYNOS5430) || defined(CONFIG_SOC_EXYNOS5433)
-#define NR_A7_COEFFS 11
-#define NR_A15_COEFFS 13
+#define NR_A7_COEFFS 12
+#define NR_A15_COEFFS 15
 #define NR_GPU_COEFFS 7
 
 struct coefficients a7_cpu_coeffs[NR_A7_COEFFS] = {
@@ -169,6 +169,9 @@ struct coefficients a7_cpu_coeffs[NR_A7_COEFFS] = {
 	},
 	{
 		.frequency	= 1500,
+	},
+	{
+		.frequency	= 1600,
 	},
 };
 
@@ -212,6 +215,12 @@ struct coefficients a15_cpu_coeffs[NR_A15_COEFFS] = {
 	{
 		.frequency	= 2000,
 	},
+        {
+                .frequency      = 2100,
+        },
+        {
+                .frequency      = 2200,
+        },
 };
 #else
 #error "[IPA]there is no platform table"
