@@ -394,7 +394,7 @@ int __init exynos5_cpufreq_CA7_init(struct exynos_dvfs_info *info)
 #ifdef CONFIG_SEC_PM
 	set_boot_kfc_qos_freq(info, L7);
 #else
-	/* booting frequency is 1.3GHz */
+	/* booting frequency is 1.4GHz */
 	info->boot_cpu_min_qos = exynos5433_freq_table_CA7[L7].frequency;
 	info->boot_cpu_max_qos = exynos5433_freq_table_CA7[L7].frequency;
 #endif
